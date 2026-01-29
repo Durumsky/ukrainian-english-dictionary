@@ -14,6 +14,28 @@ Download the dictionary file here:
 
 ---
 
+## 📲 How to install on Kindle
+
+1. Connect your Kindle to your computer using a USB cable  
+2. Open the Kindle drive on your computer  
+3. Navigate to:
+
+   `documents/dictionaries/`
+
+   (If the folder does not exist, create it)
+
+4. Copy the file:
+
+   `uk-en-dictionary.mobi`
+
+5. Safely eject the Kindle
+
+6. On your Kindle, open any Ukrainian book, tap a word, and the dictionary popup should appear  
+   (If needed, select this dictionary manually from the popup menu)
+
+---
+
+
 ## 📖 What is included?
 
 This dictionary contains approximately:

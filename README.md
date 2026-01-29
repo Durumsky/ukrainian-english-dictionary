@@ -1,40 +1,12 @@
-# Ukrainian–English Kindle Dictionary (Popup Lookup)
+# Ukrainian → English Kindle Dictionary (Popup Lookup)
 
-This repository contains a **custom Ukrainian → English dictionary** designed specifically for **Kindle popup word lookup**.
-
-Unlike a normal ebook, this file works as a real Kindle dictionary:  
-when reading Ukrainian text, you can tap or highlight a word and Kindle will show its translation/definition in a popup.
-
----
-
-## 📖 What is included?
-
-- **uk-en-dictionary.mobi**  
-  A Kindle dictionary file ready to install and use.
-
-This dictionary contains approximately:
-
-- **83,000+ entries**
-- Ukrainian headwords → English definitions/translations
-- Multiple merged sources (PDF + CSV dictionaries)
-
----
-
-## ✅ Features
-
-- Works with Kindle’s built-in dictionary popup
-- Supports many word variants:
-  - lowercase / UPPERCASE / Capitalized forms  
-  - apostrophe variants (`'`, `’`, `ʼ`)
-  - Unicode normalization fixes
-  - removal of invisible characters (ZWJ, soft hyphen, NBSP, BOM…)
-  - punctuation variants (e.g. `word,` or `word.`)
+This repository contains a **custom Ukrainian → English dictionary** built specifically for **Kindle popup word lookup**. when reading Ukrainian text, you can tap or highlight a word and Kindle will show its translation/definition instantly in a popup.
 
 ---
 
 ## 📥 Download
 
-You can download the dictionary directly here:
+Download the dictionary file here:
 
 ➡️ **[Download uk-en-dictionary.mobi](./uk-en-dictionary.mobi)**
 
@@ -42,83 +14,53 @@ You can download the dictionary directly here:
 
 ---
 
-## 📲 How to install on Kindle
+## 📖 What is included?
 
-1. Connect your Kindle to your computer with a USB cable
-2. Open the Kindle drive
-3. Go to the folder: documents/dictionaries/
+This dictionary contains approximately:
 
-
-(If it does not exist, create it)
-
-4. Copy:
-
-uk-en-dictionary.mobi
-
-
-5. Safely eject the Kindle
-
----
-
-
-## 🛠 How to enable it on Kindle
-
-1. Open any Ukrainian ebook
-2. Tap a Ukrainian word
-3. If the dictionary is not selected automatically:
-
-- Tap the dictionary name in the popup
-- Choose **Ukrainian–English Dictionary**
-
-4. Kindle will remember it as default for Ukrainian texts
+- **31,900+ Ukrainian headwords**
+- Ukrainian entries → English translations/definitions
+- Cleaned and merged vocabulary from a combined CSV dataset
 
 ---
 
 ## ⚠️ Limitations / Known Issues
 
-This dictionary is generated from scanned/OCR sources and large merged datasets.
+Kindle dictionary lookup is strict:
 
-Possible issues include:
-
-- Some entries may contain OCR noise or formatting artifacts
-- Some rare wordforms may still not be recognized (Kindle lookup is strict)
-- Kindle does not perform lemmatization:
-  - inflected forms may fail unless present as variants
-  - Some headwords may appear duplicated with merged definitions
+- Kindle does **not** perform full lemmatization  
+  (inflected forms may fail unless explicitly present)
+- Some rare or irregular wordforms may not be recognized
+- The dictionary focuses on headwords rather than exhaustive morphology
+- Due to problems with OCR and data cleasing over printed old dictionaries, there are errors in some translations.
 
 ---
 
 ## 🔧 How this dictionary was created
 
-This dictionary was built using a multi-step pipeline assisted by ChatGPT:
+This dictionary was generated through a reproducible pipeline:
 
-1. Extraction of Ukrainian–English entries from multiple PDF dictionaries  
-
-2. OCR enhancement using `ocrmypdf` + Ukrainian/English language models
-
-3. Merging datasets:
-- Existing dictionary base (~41k entries)
-- Large PDF dictionary (+40k entries)
-- Additional CSV dictionary expansions
-
-4. Cleaning & normalization:
-- Unicode NFC/NFKC normalization
-- Removal of invisible characters (ZWJ/ZWNJ/soft hyphen/NBSP/BOM)
-- Deduplication and definition merging
-
-5. Kindle-specific optimization:
-- Regeneration of `dictionary.html` + `dictionary.opf`
-- Addition of `<idx:infl>` variants for better word matching
-- Final compilation into `.mobi` dictionary format via Kindle Previewer
+1. Import of a Ukrainian → English combined vocabulary CSV  
+2. Cleaning and normalization:
+   - Unicode NFC normalization  
+   - Removal of invalid/invisible characters  
+3. Deduplication:
+   - identical headwords merged into a single entry  
+4. Kindle dictionary formatting:
+   - `dictionary.html` built using the official KDP dictionary structure  
+   - `dictionary.opf` metadata with:
+     - `DictionaryInLanguage = uk`
+     - `DictionaryOutLanguage = en`
+     - `DefaultLookupIndex` properly aligned  
+5. Final compilation:
+   - Exported into `.mobi` dictionary format using **Kindle Previewer 3**
 
 ---
 
 ## 📌 Disclaimer
 
-This project is experimental and intended for personal/offline language learning use.  
+This project is experimental and intended for personal/offline language learning use.
 
 ---
 
-Feel free to edit it :)
-
-
+Feel free to contribute improvements or expanded wordform support 🙂

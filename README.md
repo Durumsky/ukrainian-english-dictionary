@@ -65,19 +65,19 @@ Kindle dictionary lookup is strict:
 This dictionary was generated through a reproducible pipeline:
 
 1. Import of a Ukrainian → English combined vocabulary CSV  
-2. Cleaning and normalization:
+2. Expansion using **12 Ukrainian fiction books**:
+   - extraction of the **20,000 most frequent additional wordforms**
+   - removal of duplicates and merging with the base dataset  
+3. Cleaning and normalization:
    - Unicode NFC normalization  
-   - Removal of invalid/invisible characters  
-3. Deduplication:
-   - identical headwords merged into a single entry  
-4. Kindle dictionary formatting:
-   - `dictionary.html` built using the official KDP dictionary structure  
-   - `dictionary.opf` metadata with:
-     - `DictionaryInLanguage = uk`
-     - `DictionaryOutLanguage = en`
-     - `DefaultLookupIndex` properly aligned  
-5. Final compilation:
-   - Exported into `.mobi` dictionary format using **Kindle Previewer 3**
+   - removal of invalid/invisible characters  
+4. Translation enrichment:
+   - missing definitions generated automatically via an external **LLM API**  
+5. Kindle dictionary formatting:
+   - `dictionary.html` built using the official KDP structure  
+   - `dictionary.opf` metadata (`uk → en`, proper lookup index)  
+6. Final compilation into `.mobi` using **Kindle Previewer 3**
+
 
 ---
 

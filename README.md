@@ -38,11 +38,13 @@ Download the dictionary file here:
 
 ## 📖 What is included?
 
-This dictionary contains approximately:
+This dictionary now contains approximately:
 
-- **31,900+ Ukrainian headwords**
-- Ukrainian entries → English translations/definitions
-- Cleaned and merged vocabulary from a combined CSV dataset
+- **62,751+ Ukrainian entries**
+- Ukrainian wordforms → English translations/definitions
+- Expanded vocabulary including the **20,000 most common words extracted from 12 fiction books**
+- Improved support for **inflected forms** (declensions, conjugations, plural forms, etc.)
+- Cleaned and merged dataset with deduplicated entries
 
 ---
 

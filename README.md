@@ -42,31 +42,17 @@ This dictionary now contains approximately:
 
 - **62,751+ Ukrainian entries**
 - Ukrainian wordforms → English translations/definitions
-- Expanded vocabulary including the **20,000 most common words extracted from 12 fiction books**
+- Expanded vocabulary including the **most common words extracted from 12 fiction books**
 - Improved support for **inflected forms** (declensions, conjugations, plural forms, etc.)
 - Cleaned and merged dataset with deduplicated entries
 
----
-
-## ⚠️ Limitations / Known Issues
-
-Kindle dictionary lookup is strict:
-
-- Kindle does **not** perform full lemmatization  
-  (inflected forms may fail unless explicitly present)
-- Some rare or irregular wordforms may not be recognized
-- The dictionary focuses on headwords rather than exhaustive morphology
-- Due to problems with OCR and data cleasing over printed old dictionaries, there are errors in some translations.
-
----
 
 ## 🔧 How this dictionary was created
 
-This dictionary was generated through a reproducible pipeline:
 
 1. Import of a Ukrainian → English combined vocabulary CSV  
 2. Expansion using **12 Ukrainian fiction books**:
-   - extraction of the **20,000 most frequent additional wordforms**
+   - extraction of the **most frequent additional wordforms**
    - removal of duplicates and merging with the base dataset  
 3. Cleaning and normalization:
    - Unicode NFC normalization  
